@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Code Editor (Works)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Simple Code Editor</h1>
+    <div class="controls">
+      <select id="mode">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+      </select>
+      <button id="runBtn">Run</button>
+      <button id="saveBtn">Save Local</button>
+      <button id="loadBtn">Load Local</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Fallback simple editor: textarea (always works) -->
+    <textarea id="editor" aria-label="code editor"></textarea>
+
+    <div id="previewWrap">
+      <div class="previewHeader">Preview</div>
+      <iframe id="preview" sandbox="allow-forms allow-scripts allow-same-origin"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <small>Built for GitHub Pages • No backend • Files stored in your browser</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
